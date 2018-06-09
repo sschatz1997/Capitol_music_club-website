@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Capitol Music Club</title>
+	<style>
+	body {
+		background-image: url("background.jpg");
+	}
+	#playlist{
+		list-style: none;
+	}
+	#playlist li a{
+		color:black;
+		text-decoration: none;
+	}
+	#playlist .current-song a{
+		color:blue;
+	}
+		
+</style>
+</head>
+	<body>
+		<center><h1>This is the website for capitols music club</h1></center>
+		<center><strong>Mystery Song 1</strong></center>
+		<br /> </br>
+		<center><audio src="song1.mp3" controls></audio></center>
+		<br /></br>
+		<center><strong>Mystery Song 2</strong></center>
+		<br /></br>
+		<center><audio src= "song2.mp3" controls></audio></center>
+		<br /></br>
+
+<div>
+	<form align="center" name ="submit" id="webform" method="post" # action="post.php">
+		<label for="name">Name</label>
+		<center><input type="text" id="name" name="name" placeholder="enter your name"></center>
+
+		<label for="email">email</label>
+		<center><input type="text" id="email" name="email" placeholder="enter your email"></center>
+
+		<center><input id="btn" type="submit" name="submit" value="Submit"></center>
+	</form>
+</div>
+</body> 
+</html>
