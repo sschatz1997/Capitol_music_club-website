@@ -1,0 +1,33 @@
+p {
+	font-family: Serif, "Times New Roman";
+	font-style: normal;
+	font-size: 40px;
+	text-align: center;
+	color: black;
+	margin: 0px;
+}
+h1 {
+	font-family: Serif, "Times New Roman";
+	font-style: normal;
+	font-size: 40px;
+	text-align: center;
+	color: red;
+	margin: 0px;
+}
+a {
+	font-family: Serif, "Times New Roman";
+	font-style: normal;	
+	font-size: 35px;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	margin: 0px;
+}
+p {
+	font-family: Serif, "Times New Roman";
+	font-style: normal;	
+	font-size: 40px;
+	text-align: center;
+	color: black;
+	margin: 0px;
+}
