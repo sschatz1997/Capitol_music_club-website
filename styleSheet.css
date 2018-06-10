@@ -80,3 +80,6 @@ ul  li a {
 	font-size: 40px;
 	padding: 0 20px;
 }
+ul  li a:hover {
+	color: red;
+}
