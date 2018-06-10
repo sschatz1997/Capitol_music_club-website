@@ -76,7 +76,7 @@ ul  li a {
 	display: block;
 	text-decoration: none;
 	font-family: Serif, "Times New Roman";
-	font-style: normal;
-	font-size: 20px;
+	font-style: bold;
+	font-size: 40px;
 	padding: 0 20px;
 }
