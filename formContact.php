@@ -1,6 +1,4 @@
 <?php
-if($_POST['submit']))
-{
 
 $name = $_POST['name'];
 $email = $_POST['email'];
@@ -11,5 +9,5 @@ $f = $name.",".$email."\n";
 fputs($file,$f) or die ("no data was written");
 
 fclose($file);
-}
+
 ?>
