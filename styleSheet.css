@@ -22,6 +22,14 @@ h2 {
 	color: red;
 	margin: 0px;
 }
+h3 {
+	font-family: Serif, "Times New Roman";
+	font-style: bold;
+	font-size: 80px;
+	text-align: center;
+	color: red;
+	margin: 0px;
+}
 a {
 	font-family: Serif, "Times New Roman";
 	font-style: normal;	
