@@ -4,6 +4,14 @@
 	<meta charset="UTF-8">
 	<title>Capitol Music Club</title>
 	<style>
+	* { 
+		margin: 0;
+		padding: 0;
+	}
+	#map {
+		height: 500px;
+		width: 100%;
+	}
 	body {
 		background-image: url("background.jpg");
 	}
@@ -31,6 +39,7 @@
 		<center><audio src= "song2.mp3" controls></audio></center>
 		<br /></br>
 
+
 <div>
 	<form align="center" name ="submit" id="webform" method="post" # action="post.php">
 		<label for="name">Name</label>
@@ -42,5 +51,18 @@
 		<center><input id="btn" type="submit" name="submit" value="Submit"></center>
 	</form>
 </div>
+<center><strong>This is the location of Capitol Technology University</strong></center>
+<!--<div id="map"></div>
+<script>
+	function initMap(){
+		var location = {lat: 39.0447385, lng: -76.854787};
+		var map = new google.maps.Map(document.getElementById("map"), {
+			zoom: 4, 
+			center: location
+		});
+	}
+</script>-->
+
+
 </body> 
 </html>
