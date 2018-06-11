@@ -51,7 +51,7 @@ p {
 	margin: 0px;
 }
 body {
-	background-image: url("background.jpg");
+	background-image: url("img/background.jpg");
 }
 #playlist{
 	list-style: none;
