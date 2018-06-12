@@ -25,4 +25,7 @@ sleep(0.5)
 os.system("cp Redirect.html /var/www/html/Redirect.html")
 sleep(0.5)
 
+os.system("cp rap.html /var/www/html/rap.html")
+sleep(0.5)
+
 print("Website updated")
