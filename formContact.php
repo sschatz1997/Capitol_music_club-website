@@ -5,7 +5,7 @@ $email = $_POST['email'];
 
 $file = fopen("contact.txt", "a") or die ("file not open");
 
-$f = $name.",".$email."\n";
+$f = $name." , ".$email."\n";
 fputs($file,$f) or die ("no data was written");
 
 fclose($file);
