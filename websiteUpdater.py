@@ -1,6 +1,9 @@
 import os
 from time import sleep
 
+os.system("git pull https://github.com/sschatz1997/Capitol_music_club-website")
+sleep(2)
+
 os.system("cp viewcounter.php /var/www/html/viewcounter.php")
 sleep(0.5)
 
