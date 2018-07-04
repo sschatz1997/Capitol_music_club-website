@@ -9,6 +9,6 @@ $f = $name." , ".$email."\n";
 fputs($file,$f) or die ("no data was written");
 
 fclose($file);
-header("Location: http://10.0.54.169/Redirect.html"); 
+header("Location: http://192.168.1.91/Redirect.html"); 
 exit();
 ?>
