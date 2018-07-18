@@ -31,4 +31,7 @@ sleep(0.5)
 os.system("cp music.html /var/www/html/music.html")
 sleep(0.5)
 
+os.system("cp charts.html /var/www/html/charts.html")
+sleep(0.5)
+
 print("\n" + "Website updated")
