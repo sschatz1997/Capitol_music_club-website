@@ -28,7 +28,4 @@ sleep(0.5)
 os.system("cp rap.html /var/www/html/rap.html")
 sleep(0.5)
 
-os.system("cp music.html /var/www/html/music.html")
-sleep(0.5)
-
-print("\n" + "Website updated")
+print("Website updated")
