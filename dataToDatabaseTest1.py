@@ -18,7 +18,7 @@ with open(contactsMain, "r") as f:
 		print(line)
 		try:
 			c.execute("INSERT INTO {tn} {cn}VALUES (123456, 'test')".\
-				format(tn=table1, idf=column1, cn=column2))
+			format(tn=table1, idf=column1, cn=column2))
 		except s.IntegrityError:
 			print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))
 		c.commit()
