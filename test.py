@@ -6,9 +6,12 @@ i = 0
 
 with open(contactsMain, "r") as f:
 	while True:
-		line = f.readlines()
-		print(line)
-		name, email = line.split(',', 1)
-	
-		sleep(.1)
-		del(line)
+		for line in f:
+			Data = line.split(",")
+			name = Data[1]
+			email = Data[2]
+			print(name, " ", email)	
+			sleep(.1)
+			del(Data)
+			if Data == "":
+				False
