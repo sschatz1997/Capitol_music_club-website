@@ -10,7 +10,7 @@ i = 0
 
 with open(contactsMain) as f:
 	while True:
-		line = f.readlines(array[:1])
+		line = f.readlines(array[1])
 		splitdata = line.split(";")
 		print(splitdata)
 		sleep(.1)
