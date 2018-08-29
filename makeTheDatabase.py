@@ -18,7 +18,7 @@ cur = c.cursor()
 #        .format(tn=table2, nf=column1, ft=field_type))		
 
 cur.execute("ALTER TABLE {tn} ADD COLUMN '{cn}' {ct}"\
-        .format(tn=table1, cn=column1, ct=column_type))
+        .format(tn=table1, cn=column2, ct=column_type))
 
 conn.commit()
 conn.close()
