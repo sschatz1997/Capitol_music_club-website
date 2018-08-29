@@ -2,12 +2,13 @@ from time import sleep
 import sqlite3 as s
 
 contactsMain = "/var/www/html/contact.txt"
-database = "/root/disk3/database.db"
-c = s.connect('test.db')
-cur = c.cursor()
+database = "/root/disk3/database.sqlite"
 table1 = 'table1'
+table2 = 'table2'
 column1 = 'column1'
 column2 = 'column2'
+c = s.connect(database)
+cur = c.cursor()
 
 array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 i = 0
