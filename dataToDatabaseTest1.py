@@ -6,7 +6,7 @@ i = 0
 
 with open(contactsMain) as f:
 	while 0 != 10:
-		line = readline(array[i])
+		line = readlines(array[i])
 		print(line)
 		s(.1)
 		i += 1
