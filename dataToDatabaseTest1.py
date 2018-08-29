@@ -30,8 +30,8 @@ with open(contactsMain, "r") as f:
 				print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))
 			
 			
-			cur.commit()
+			c.commit()
 			sleep(.1)
 		#del(line)
 f.close()
-cur.close()
+c.close()
