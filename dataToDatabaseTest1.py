@@ -1,10 +1,10 @@
 from time import sleep 
 import sqlite3 as s
 
-c = s.connect('test.db')
-cur = c.cursor()
 contactsMain = "/var/www/html/contact.txt"
 database = "/root/disk3/database.db"
+c = s.connect('test.db')
+cur = c.cursor()
 table1 = 'table1'
 column1 = 'column1'
 column2 = 'column2'
@@ -16,9 +16,9 @@ with open(contactsMain, "r") as f:
 	while True:
 		line = f.readlines(array[1])
 		print(line)
-		line == clean(line)
 		try:
-			cur.execute("INSERT INTO {tn} {cn}VALUES (123456, 'test')".format(tn='table1', idf='column1', cn='column2'), ('test1', 'test2'))
+			cur.execute("INSERT INTO {tn} ({idf}, {cn}) VALUES (123456, 'test')".\
+				format(tn='table1', idf='column1', cn='column2'), ('test1', 'test2'))
 		except s.IntegrityError:
 			print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))
 		
