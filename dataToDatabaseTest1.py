@@ -18,7 +18,7 @@ with open(contactsMain, "r") as f:
 		line = f.readlines(array[1])
 		print(line)
 		try:
-			cur.execute("INSERT INTO {tn} ({idf}, {cn}) VALUES (123456, 'test')".\
+			cur.execute("INSERT INTO {tn} ({idf}, {cn}) VALUES (123456, 'test');".\
 				format(tn='table1', idf='column1', cn='column2'), ('test1', 'test2'))
 		except s.IntegrityError:
 			print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))
