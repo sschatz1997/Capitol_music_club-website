@@ -20,5 +20,5 @@ cur = c.cursor()
 cur.execute("ALTER TABLE {tn} ADD COLUMN '{cn}' {ct}"\
         .format(tn=table1, cn=column2, ct=column_type))
 
-conn.commit()
-conn.close()
+c.commit()
+c.close()
