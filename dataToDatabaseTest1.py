@@ -15,11 +15,11 @@ with open(contactsMain, "r") as f:
 	while True:
 		line = f.readlines(array[1])
 		print(line)
-			try:
-				cin.excute("INSERT INTO {tn} {cn}VALUES (123456, 'test')".\
-					format(tn=table_name, idf=id_column, cn=column_name))
-			except s.IntegrityError:
-				print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))
+		try:
+			cin.excute("INSERT INTO {tn} {cn}VALUES (123456, 'test')".\
+				format(tn=table_name, idf=id_column, cn=column_name))
+		except s.IntegrityError:
+			print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))
 		c.commit()
 		sleep(.1)
 		#del(line)
