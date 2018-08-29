@@ -16,13 +16,16 @@ with open(contactsMain, "r") as f:
 	while True:
 		line = f.readlines(array[1])
 		print(line)
+	
 		try:
-			c.execute("INSERT INTO {tn} {cn}VALUES (123456, 'test')".\
+			cur.execute("INSERT INTO {tn} {cn}VALUES (123456, 'test')".\
 			format(tn=table1, idf=column1, cn=column2))
 		except s.IntegrityError:
 			print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))
-		c.commit()
+		
+		
+		cur.commit()
 		sleep(.1)
 		#del(line)
-		c.close()
+		cur.close()
 f.close()
