@@ -1,6 +1,5 @@
 from time import sleep 
 import sqlite3 as s
-from sqlite3 import error
 
 #c = s.connect('test.db')
 contactsMain = "/var/www/html/contact.txt"
