@@ -16,17 +16,22 @@ i = 0
 
 with open(contactsMain, "r") as f:
 	while True:
-		line = f.readlines(array[1])
-		print(line)
-		try:
-			cur.execute("INSERT INTO {tn} ({idf}, {cn}) VALUES (123456, 'test');".\
-				format(tn='table1', idf='column1', cn='column2'), ('test1', 'test2'))
-		except s.IntegrityError:
-			print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))
-		
-		
-		cur.commit()
-		sleep(.1)
+		for line in f:
+			Data = line.split(",")
+			name = Data[0]
+			email = Data[1]
+			print(name, " ", email)	
+			sleep(.1)
+			del(Data)
+			try:
+				cur.execute("INSERT INTO {tn} ({idf}, {cn}) VALUES (?, ?);".\
+					format(tn='table1', idf='column1', cn='column2'), (name, email))
+			except s.IntegrityError:
+				print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))
+			
+			
+			cur.commit()
+			sleep(.1)
 		#del(line)
 f.close()
 cur.close()
