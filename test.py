@@ -8,8 +8,8 @@ with open(contactsMain, "r") as f:
 	while True:
 		for line in f:
 			Data = line.split(",")
-			name = Data[1]
-			email = Data[2]
+			name = Data[0]
+			email = Data[1]
 			print(name, " ", email)	
 			sleep(.1)
 			del(Data)
