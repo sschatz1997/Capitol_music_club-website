@@ -1,7 +1,8 @@
 from time import sleep 
 import sqlite3 as s
+from sqlite3 import error
 
-c = s.connect('test.db')
+#c = s.connect('test.db')
 contactsMain = "/var/www/html/contact.txt"
 database = "/root/disk3/database.db"
 
@@ -11,7 +12,8 @@ i = 0
 with open(contactsMain) as f:
 	while True:
 		line = f.readlines(array[:1])
-		print(line)
+		splitdata = line.split(";")
+		print(splitdata)
 		sleep(.1)
-		del(line)
+		#del(line)
 f.close()
