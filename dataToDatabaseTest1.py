@@ -1,5 +1,5 @@
 from time import sleep as s
-import sqlite as s
+import sqlite3 as s
 
 c = s.connect('test.db')
 contactsMain = "/var/www/html/contact.txt"
