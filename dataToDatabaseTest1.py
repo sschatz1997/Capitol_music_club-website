@@ -11,7 +11,7 @@ column1 = 'column1'
 array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 i = 0
 
-with open(contactsMain, ") as f:
+with open(contactsMain, "r") as f:
 	while True:
 		line = f.readlines(array[1])
 		print(line)
@@ -22,6 +22,6 @@ with open(contactsMain, ") as f:
 				print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))
 		c.commit()
 		sleep(.1)
-		del(line)
+		#del(line)
 		c.close()
 f.close()
