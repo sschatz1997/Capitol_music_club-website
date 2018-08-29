@@ -6,7 +6,7 @@ i = 0
 
 with open(contactsMain, "r") as f:
 	while True:
-		line = f.readlines(array[1])
+		line = f.readlines()
 		print(line)
 		name, email = line.split(',', 1)
 	
