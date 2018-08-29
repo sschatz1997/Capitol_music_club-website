@@ -13,5 +13,5 @@ with open(contactsMain, "r") as f:
 			print(name, " ", email)	
 			sleep(.1)
 			del(Data)
-			if Data == "":
+			if Data = "":
 				False
