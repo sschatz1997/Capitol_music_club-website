@@ -1,4 +1,4 @@
-from time import sleep as s
+from time import sleep 
 import sqlite3 as s
 
 c = s.connect('test.db')
@@ -10,6 +10,6 @@ with open(contactsMain) as f:
 	while 0 != 10:
 		line = f.readlines(array[i])
 		print(line)
-		s(.1)
+		sleep(.1)
 		i += 1
 f.close()
