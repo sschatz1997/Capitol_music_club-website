@@ -2,11 +2,12 @@ from time import sleep
 import sqlite3 as s
 
 contactsMain = "/var/www/html/contact.txt"
-database = "/root/disk3/database.sqlite"
+database = "/root/disk3/database_main.sqlite"
 table1 = 'table1'
-table2 = 'table2'
-column1 = 'column1'
-column2 = 'column2'
+column1 = 'name'
+column2 = 'email'
+field_type = 'INTEGER'
+column_type = 'TEXT'
 c = s.connect(database)
 cur = c.cursor()
 
@@ -27,5 +28,5 @@ with open(contactsMain, "r") as f:
 		cur.commit()
 		sleep(.1)
 		#del(line)
-		cur.close()
 f.close()
+cur.close()
