@@ -16,7 +16,7 @@ with open(contactsMain, "r") as f:
 	while True:
 		line = f.readlines(array[1])
 		print(line)
-	
+		line == clean(line)
 		try:
 			cur.execute("INSERT INTO {tn} {cn}VALUES (123456, 'test')".format(tn='table1', idf='column1', cn='column2'), ('test1', 'test2'))
 		except s.IntegrityError:
