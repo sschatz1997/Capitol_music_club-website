@@ -7,11 +7,18 @@ table2 = 'table2'
 column1 = 'column1'
 column2 = 'column2'
 field_type = 'INTEGER'
+column_type = 'TEXT'
 c = s.connect(database)
 cur = c.cursor()
 
-cur.execute('CREATE TABLE {tn} ({nf} {ft})'\
-        .format(tn=table1, nf=column1, ft=field_type))
+#cur.execute('CREATE TABLE {tn} ({nf} {ft})'\
+#        .format(tn=table1, nf=column1, ft=field_type))
 
-cur.execute('CREATE TABLE {tn} ({nf} {ft} PRIMARY KEY)'\
-        .format(tn=table2, nf=column1, ft=field_type))		
+#cur.execute('CREATE TABLE {tn} ({nf} {ft} PRIMARY KEY)'\
+#        .format(tn=table2, nf=column1, ft=field_type))		
+
+cur.execute("ALTER TABLE {tn} ADD COLUMN '{cn}' {ct}"\
+        .format(tn=table1, cn=column1, ct=column_type))
+
+conn.commit()
+conn.close()
