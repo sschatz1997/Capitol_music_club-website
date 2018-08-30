@@ -20,7 +20,7 @@ with open(contactsMain, "r") as f:
 			Data = line.split(",")
 			name = Data[0]
 			email = Data[1]
-			print(name, " ", email)	
+			print("DB1: new entry for contact")	
 			sleep(.1)
 			del(Data)
 			try:
