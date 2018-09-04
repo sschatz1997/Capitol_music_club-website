@@ -63,10 +63,16 @@ with open(contactsMain, "r") as f:
 				x1.commit()
 				sleep(.1)
 			#del(line)
-			if Data[] != "":
-				f.write("\n")
-			if U[] != "":
-				f2.write("\n")
+			deleteData1 = open(contactsMain, "w")
+			del Data[0]
+			del Data[1]
+			deleteData1.write(Data)
+			deleteData1.close()
+			deleteData2 = open(username_passwordMain, "w")
+			del U[0]
+			del U[1]
+			deleteData1.write(U)
+			deleteData2.close()
 				
 			
 f.close()
