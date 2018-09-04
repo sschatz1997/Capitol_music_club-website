@@ -66,7 +66,7 @@ with open(contactsMain, "r") as f:
 			
 				deleteData2 = open(username_passwordMain, "w")
 				U = line.split(",")
-				deleteData2.write(U)
+				deleteData2.write(str(U))
 				deleteData2.close()			
 				decoded = base64.b64decode(password.decode())
 				x1.commit()
