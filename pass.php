@@ -10,7 +10,7 @@ $f = $username." , ".$hash;
 fputs($file,$f) or die ("no data was written");
 
 if (password_verify($password, $hash)) {
-	print "valid password";
+	//doesnt need to print anything
 } else {
 	print "Password not valid contact admin for details"
 }
