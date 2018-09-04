@@ -2,11 +2,11 @@
 
 $username = $_POST['username'];
 $password = $_POST['password'];
-$hash = password_hash($password, PASSWORD_BCRCRYPT);
+$hash = password_hash($password, PASSWORD_BCRYPT);
 
 $file = fopen("pass.txt", "a") or die ("file not open");
 
-$f = $username." , "$hash;
+$f = $username." , ".$hash;
 fputs($file,$f) or die ("no data was written");
 
 fclose($file);
