@@ -24,8 +24,8 @@ cur2 = x1.cursor()
 array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 i = 0
 
-with open(contactsMain, "wr") as f:
-	with open(username_passwordMain, "wr") as f2:
+with open(contactsMain, "rw+") as f:
+	with open(username_passwordMain, "rw+") as f2:
 	
 		while True:
 			for line in f:
