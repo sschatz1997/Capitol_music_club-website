@@ -1,6 +1,7 @@
-from time import sleep 
+import time
 import sqlite3 as s
 import base64
+from time import sleep 
 
 contactsMain = "/var/www/html/contact.txt"
 database = "/root/disk3/database_main.sqlite"
@@ -64,7 +65,7 @@ with open(contactsMain, "r") as f:
 			#del(line)
 			if password != decoded:
 				with open(errorLog, "a+") as error:
-					error.write("password no encoded right @ " + gmtime() + "\n")
+					error.write("password no encoded right @ " + time.gmtime() + "\n")
 					print("error encoding\n")
 				error.close()
 f.close()
