@@ -69,7 +69,7 @@ with open(contactsMain, "r") as f:
 				x1.commit()
 				sleep(.1)
 				with open(username_passwordMain, "w") as d2:
-					for linw in d2:
+					for line in d2:
 						del(line)
 						d2.write(line)
 						d2.close()
