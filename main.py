@@ -48,7 +48,7 @@ with open(contactsMain, "r") as f:
 				U = line.split(",")
 				username = U[0]
 				password = U[1]
-				password = base64.b64encode(password)
+				password = base64.b64encode(password.encode())
 				print("DB2: new user")	
 				sleep(.1)
 				del(U)
