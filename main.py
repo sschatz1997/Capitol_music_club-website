@@ -9,7 +9,7 @@ table1 = 'table1'
 column1 = 'name'
 column2 = 'email'
 
-table2 = 'table1'
+table2 = 'table2'
 column3 = 'username'
 column4 = 'password'
 #field_type = 'INTEGER'
