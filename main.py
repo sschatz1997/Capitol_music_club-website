@@ -44,7 +44,7 @@ with open(contactsMain, "r") as f:
 
 				c.commit()
 				sleep(.1)
-				
+				del(line)
 			for line in f2:
 				U = line.split(",")
 				print(U)
@@ -64,6 +64,7 @@ with open(contactsMain, "r") as f:
 				
 				x1.commit()
 				sleep(.1)
+				del(line)
 				
 			
 f.close()
