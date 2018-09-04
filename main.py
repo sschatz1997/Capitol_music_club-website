@@ -1,10 +1,12 @@
 from time import sleep 
 import sqlite3 as s
+import base64
 
 contactsMain = "/var/www/html/contact.txt"
 database = "/root/disk3/database_main.sqlite"
 username_passwordMain = "/var/www/html/pass.txt"
 database2 = "/root/disk3/password_main.sqlite"
+errorLog = "/root/disk3/errorLog.txt"
 table1 = 'table1'
 column1 = 'name'
 column2 = 'email'
@@ -46,6 +48,7 @@ with open(contactsMain, "r") as f:
 				U = line.split(",")
 				username = U[0]
 				password = U[1]
+				password = base64.b64encode(password)
 				print("DB2: new user")	
 				sleep(.1)
 				del(U)
@@ -55,10 +58,16 @@ with open(contactsMain, "r") as f:
 				except s.IntegrityError:
 					print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))
 				
-				
+				decoded = base64.b64decode(password)
 				x1.commit()
 				sleep(.1)
 			#del(line)
+			if password != decoded:
+				with open(errorLog, "a+") as error:
+					error.write("password no encoded right @ " + gmtime() + "\n")
+					print("error encoding\n")
+				error.close()
+				return()
 f.close()
 c.close()
 f2.close()
