@@ -34,4 +34,7 @@ sleep(0.5)
 os.system("cp charts.html /var/www/html/charts.html")
 sleep(0.5)
 
+os.system("cp login.html /var/www/html/login.html")
+sleep(0.5)
+
 print("\n" + "Website updated")
