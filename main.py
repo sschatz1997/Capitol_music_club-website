@@ -59,7 +59,7 @@ with open(contactsMain, "r") as f:
 				except s.IntegrityError:
 					print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))
 				
-				decoded = base64.b64decode(password)
+				decoded = base64.b64decode(password.decode())
 				x1.commit()
 				sleep(.1)
 			#del(line)
