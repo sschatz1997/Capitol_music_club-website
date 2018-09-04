@@ -72,7 +72,7 @@ with open(contactsMain, "r") as f:
 				with open(username_passwordMain, "w") as d2:
 					for line in d2:
 						del(line)
-						d2.write("")
+						d2.truncate(0)
 						d2.close()
 			
 f.close()
