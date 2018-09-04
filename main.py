@@ -24,8 +24,8 @@ cur2 = x1.cursor()
 array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 i = 0
 
-with open(contactsMain, "w") as f:
-	with open(username_passwordMain, "w") as f2:
+with open(contactsMain, "r") as f:
+	with open(username_passwordMain, "r") as f2:
 	
 		while True:
 			for line in f:
@@ -44,9 +44,10 @@ with open(contactsMain, "w") as f:
 
 				c.commit()
 				sleep(.1)
-				del(line)
-				f.write(line)
-				f.close()
+				with open(contactsMain, "w") as d1:
+					del(line)
+					d1.write(line)
+					d1.close()
 			for line in f2:
 				U = line.split(",")
 				print(U)
@@ -66,9 +67,10 @@ with open(contactsMain, "w") as f:
 				
 				x1.commit()
 				sleep(.1)
-				del(line)
-				f2.write(line)
-				f2.close()
+				with open(username_passwordMain, "w") as d2:
+					del(line)
+					d2.write(line)
+					d2.close()
 			
 f.close()
 c.close()
