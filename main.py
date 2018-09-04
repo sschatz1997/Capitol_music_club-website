@@ -49,6 +49,7 @@ with open(contactsMain, "r") as f:
 				
 			for line in f2:
 				U = line.split(",")
+				print(U)
 				username = U[0]
 				password = U[1]
 				password = base64.b64encode(password.encode())
