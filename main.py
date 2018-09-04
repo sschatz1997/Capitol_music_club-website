@@ -68,8 +68,8 @@ with open(contactsMain, "r+") as f:
 				x1.commit()
 				sleep(.1)
 				del(line)
-				d2.truncate(0)
-				d2.close()
+				f2.truncate(0)
+				f2.close()
 
 f2.close()
 f.close()
