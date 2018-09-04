@@ -42,6 +42,7 @@ with open(contactsMain, "r") as f:
 					print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))
 				
 				deleteData1 = open(contactsMain, "w")
+				Data = line.split(",")
 				deleteData1.write(Data)
 				deleteData1.close()
 				c.commit()
@@ -64,6 +65,7 @@ with open(contactsMain, "r") as f:
 					print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))
 			
 				deleteData2 = open(username_passwordMain, "w")
+				U = line.split(",")
 				deleteData2.write(U)
 				deleteData2.close()			
 				decoded = base64.b64decode(password.decode())
