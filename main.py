@@ -44,11 +44,11 @@ with open(contactsMain, "r") as f:
 				
 			for line in f2:
 				Data2 = line.split(",")
-				username = Data[0]
-				password = Data[1]
+				username = U[0]
+				password = P[1]
 				print("DB2: new user")	
 				sleep(.1)
-				del(Data)
+				del(Data2)
 				try:
 					cur2.execute("INSERT INTO {tn} ({idf}, {cn}) VALUES (?, ?);".\
 						format(tn='table1', idf=column1, cn=column2), (name, email))
