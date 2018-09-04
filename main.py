@@ -45,9 +45,10 @@ with open(contactsMain, "r") as f:
 				c.commit()
 				sleep(.1)
 				with open(contactsMain, "w") as d1:
-					del(line)
-					d1.write(line)
-					d1.close()
+					for line in d1:
+						del(line)
+						d1.write(line)
+						d1.close()
 			for line in f2:
 				U = line.split(",")
 				print(U)
@@ -68,9 +69,10 @@ with open(contactsMain, "r") as f:
 				x1.commit()
 				sleep(.1)
 				with open(username_passwordMain, "w") as d2:
-					del(line)
-					d2.write(line)
-					d2.close()
+					for linw in d2:
+						del(line)
+						d2.write(line)
+						d2.close()
 			
 f.close()
 c.close()
