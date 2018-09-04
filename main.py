@@ -68,6 +68,7 @@ with open(contactsMain, "r") as f:
 				
 				x1.commit()
 				sleep(.1)
+				f2.close()
 				with open(username_passwordMain, "w") as d2:
 					for line in d2:
 						del(line)
@@ -76,5 +77,4 @@ with open(contactsMain, "r") as f:
 			
 f.close()
 c.close()
-f2.close()
 x1.close()
