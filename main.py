@@ -41,10 +41,7 @@ with open(contactsMain, "r") as f:
 				except s.IntegrityError:
 					print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))
 				
-				deleteData1 = open(contactsMain, "w")
-				Data = line.split(",")
-				deleteData1.write(Data)
-				deleteData1.close()
+
 				c.commit()
 				sleep(.1)
 				
@@ -64,23 +61,9 @@ with open(contactsMain, "r") as f:
 				except s.IntegrityError:
 					print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))
 			
-				deleteData2 = open(username_passwordMain, "w")
-				U = line.split(",")
-				del(U)
-				deleteData2.write(str(U))
-				deleteData2.close()			
-				decoded = base64.b64decode(password.decode())
+				
 				x1.commit()
 				sleep(.1)
-			#del(line)
-			#deleteData1 = open(contactsMain, "w")
-			#deleteData1.write(Data)
-			#deleteData1.close()
-			#deleteData2 = open(username_passwordMain, "w")
-			#del U[0]
-			#del U[1]
-			#deleteData1.write(U)
-			#deleteData2.close()
 				
 			
 f.close()
