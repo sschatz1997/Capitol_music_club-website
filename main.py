@@ -63,13 +63,12 @@ with open(contactsMain, "r") as f:
 				x1.commit()
 				sleep(.1)
 			#del(line)
-			if password != decoded:
-				with open(errorLog, "a+") as error:
-					#error.write("password no encoded right @ " + str(time.gmtime()) + "\n")
-					#print("error encoding\n")
-					print(str(password)+"\n")
-					print(decoded)
-				error.close()
+			if Data[] != "":
+				f.write("\n")
+			if U[] != "":
+				f2.write("\n")
+				
+			
 f.close()
 c.close()
 f2.close()
