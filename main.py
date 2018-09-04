@@ -69,7 +69,6 @@ with open(contactsMain, "r+") as f:
 				sleep(.1)
 				del(line)
 				f2.truncate(0)
-				f2.close()
 
 f2.close()
 f.close()
