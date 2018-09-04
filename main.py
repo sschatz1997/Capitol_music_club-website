@@ -67,7 +67,7 @@ with open(contactsMain, "r") as f:
 				with open(errorLog, "a+") as error:
 					#error.write("password no encoded right @ " + str(time.gmtime()) + "\n")
 					#print("error encoding\n")
-					print(password+"\n")
+					print(str(password)+"\n")
 					print(decoded)
 				error.close()
 f.close()
