@@ -51,7 +51,7 @@ with open(contactsMain, "r") as f:
 				del(U)
 				try:
 					cur2.execute("INSERT INTO {tn} ({idf}, {cn}) VALUES (?, ?);".\
-						format(tn='table1', idf=column1, cn=column2), (name, email))
+						format(tn='table2', idf=column1, cn=column2), (name, email))
 				except s.IntegrityError:
 					print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))
 				
