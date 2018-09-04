@@ -47,7 +47,7 @@ with open(contactsMain, "r") as f:
 				with open(contactsMain, "w") as d1:
 					for line in d1:
 						del(line)
-						d1.write(line)
+						d1.write("")
 						d1.close()
 			for line in f2:
 				U = line.split(",")
@@ -72,7 +72,7 @@ with open(contactsMain, "r") as f:
 				with open(username_passwordMain, "w") as d2:
 					for line in d2:
 						del(line)
-						d2.write(line)
+						d2.write("")
 						d2.close()
 			
 f.close()
