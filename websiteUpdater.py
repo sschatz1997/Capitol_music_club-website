@@ -42,4 +42,7 @@ sleep(0.5)
 
 os.system("cp succes.html /var/www/html/succes.html")
 sleep(0.5)
+
+os.system("cp login.php /var/www/html/login.php")
+sleep(0.5)
 print("\n" + "Website updated")
