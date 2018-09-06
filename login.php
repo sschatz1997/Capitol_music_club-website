@@ -1,14 +1,13 @@
 <?php
     $dir = '/root/disk3/password_main.sqlite';
     $dbh = new PDO($dir) or die ("cannot open");
+    $password = stripslashes($password);
+    $username = $_POST['username'];
+    $hash = password_verify[$password, PASSWORD_BCRYPT];
+	$password = $hash
+    $username = stripslashes($username);
 
-    $myusername = $_POST['username'];
-    $mypassword = $_POST['password'];
-
-    $myusername = stripslashes($username);
-    $mypassword = stripslashes($password);
-
-    $query = "SELECT * FROM password_main.sqlite WHERE username='$myusername' AND password='$mypassword'";
+    $query = "SELECT * FROM password_main.sqlite WHERE username='$username' AND password='$password'";
     $result = mysql_query($query);
     $count = mysql_num_rows($result);
 
