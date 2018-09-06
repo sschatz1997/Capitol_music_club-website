@@ -52,9 +52,10 @@ with open(contactsMain, "r+") as f:
 			for line in f2:
 				U = line.split(",")
 				print(U)
-				
-				username = U[3]
-				password = U[4]
+				first_name = U[0]
+				last_name = U[1]
+				username = U[2]
+				password = U[3]
 				password = base64.b64encode(password.encode())
 
 				print("DB2: new user")	
