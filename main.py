@@ -12,9 +12,11 @@ table1 = 'table1'
 column1 = 'name'
 column2 = 'email'
 
-table2 = 'table2'
-column3 = 'username'
-column4 = 'password'
+table2 = 'user_db'
+column3 = 'first_name'
+column4 = 'last_name'
+column5 = 'username'
+column6 = 'password'
 #field_type = 'INTEGER'
 column_type = 'TEXT'
 c = s.connect(database)
@@ -50,8 +52,9 @@ with open(contactsMain, "r+") as f:
 			for line in f2:
 				U = line.split(",")
 				print(U)
-				username = U[0]
-				password = U[1]
+				
+				username = U[3]
+				password = U[4]
 				password = base64.b64encode(password.encode())
 
 				print("DB2: new user")	
@@ -59,11 +62,15 @@ with open(contactsMain, "r+") as f:
 				del(U)
 				try:
 					cur2.execute("INSERT INTO {tn} ({idf}, {cn}) VALUES (?, ?);".\
-						format(tn='table2', idf=column3, cn=column4), (username, password))
+						format(tn=table2, idf=column3, cn=column4), (first_name, last_name))
 				except s.IntegrityError:
 					print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))
-			
-				
+				x1.commit()
+				try:
+					cur2.execute("INSERT INTO {tn} ({idf}, {cn}) VALUES (?, ?);".\
+						format(tn=table2, idf=column5, cn=column6), (username, password))				
+				except s.IntegrityError:
+					print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))	
 				x1.commit()
 				sleep(.1)
 				del(line)
