@@ -7,7 +7,6 @@ $password = $_POST['password'];
 $hash = password_hash($password, PASSWORD_BCRYPT);
 
 $file = fopen("pass.txt", "a") or die ("file not open");
-
 $f = $first_name." , ".$last_name." , ".$username." , ".$hash. "\n";
 fputs($file,$f) or die ("no data was written");
 

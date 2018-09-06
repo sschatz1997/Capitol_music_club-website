@@ -6,7 +6,6 @@
     $hash = password_verify[$password, PASSWORD_BCRYPT];
 	$password = $hash
     $username = stripslashes($username);
-
     $query = "SELECT * FROM password_main.sqlite WHERE username='$username' AND password='$password'";
     $result = mysql_query($query);
     $count = mysql_num_rows($result);
