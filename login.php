@@ -16,9 +16,6 @@
     echo'loged on';
     }
 	
-	if($count!=1){
-	echo'no user found. do you have an account?';
-	}
 	header("Location: http://10.1.121.102/Redirect.html"); 
 	exit();
 ?>
