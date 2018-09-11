@@ -5,7 +5,7 @@ from time import sleep
 import sys
 
 class program:
-	def main():
+	def main1():
 		contactsMain = "/var/www/html/contact.txt"
 		database = "/root/disk3/database_main.sqlite"
 		username_passwordMain = "/var/www/html/pass.txt"
