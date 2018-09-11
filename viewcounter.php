@@ -16,4 +16,10 @@ $datei = fopen("countlog.txt","w");
 fwrite($datei, $count);
 fclose($datei);
 
+$file = fopen("ip.txt","a");
+$ip=$_SERVER['REMOTE_ADDR'];
+echo $ip;
+echo fwrite($file,$ip);
+fclose($file);
+
 ?>
