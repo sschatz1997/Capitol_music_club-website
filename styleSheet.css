@@ -82,6 +82,7 @@ ul li {
 	display: inline-block;
 	float: center-left;
 	line-height: 100px;
+	background-color: #D3D3D3;
 }
 ul  li a {
 	display: block;
