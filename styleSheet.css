@@ -22,7 +22,6 @@ h2 {
 	text-align: center;
 	color: red;
 	margin: 0px;
-	background-color: #D3D3D3;
 }
 .boxed {
 	color: rgba(255, 99, 71, 0.6);
@@ -51,11 +50,14 @@ p {
 	font-style: normal;	
 	font-size: 40px;
 	text-align: center;
-	color: black;
+	color: red;
 	margin: 0px;
 }
 body {
 	background-image: url("img/background.jpg");
+}
+body1 {
+	background-image: url("img/background1.jpg");
 }
 #playlist{
 	list-style: none;
