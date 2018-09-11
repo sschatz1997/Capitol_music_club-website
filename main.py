@@ -45,7 +45,7 @@ with open(ip, "r+") as f0:
 					for line in f0:
 						ip = f0.readline()
 					try:
-						cur.execute("INSERT INTO {tn} ({idf}, {cn}) VALUES (?, ?);".\
+						cur.execute("INSERT INTO {tn} ({idf}, {cn}, {cn2}) VALUES (?, ?, ?);".\
 							format(tn='table1', idf=column1, cn=column2, cn2=column7), (name, email, ip))
 					except s.IntegrityError:
 						print('ERROR: ID already exists in PRIMARY KEY column {}'.format(id_column))
