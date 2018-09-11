@@ -2,6 +2,7 @@ import time
 import sqlite3 as s
 import base64
 from time import sleep 
+import sys
 
 contactsMain = "/var/www/html/contact.txt"
 database = "/root/disk3/database_main.sqlite"
@@ -82,6 +83,7 @@ with open(ip, "r+") as f0:
 					x1.commit()
 					sleep(.1)
 					del(line)
+					print(u, Data)
 					#f.truncate(0)
 					#f2.truncate(0)
 f0.close()
