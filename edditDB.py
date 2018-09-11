@@ -3,6 +3,7 @@ from time import sleep
 database = "/root/disk3/database_main.sqlite"
 table1 = 'table1'
 column3 = 'ip'
+column_type = 'TEXT'
 c = s.connect(database)
 cur = c.cursor()
 
