@@ -91,6 +91,7 @@ ul  li a {
 	font-style: bold;
 	font-size: 40px;
 	padding: 0 20px;
+	background-color: #D3D3D3;
 }
 ul  li a:hover {
 	color: red;
@@ -103,4 +104,5 @@ login {
     margin-top: -13px;
     margin-right: 20px;
 	text-align: center;
+	background-color: #D3D3D3;
 }
