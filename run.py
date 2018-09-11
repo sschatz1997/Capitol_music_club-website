@@ -1,5 +1,5 @@
 from multiprocessing import Pipe, Process, Array
-from main import main1
+from main import program
 from time import sleep as s
 
 def main():
