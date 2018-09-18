@@ -14,7 +14,7 @@ $ip = $_SERVER['REMOTE_ADDR'];
 
 $file = "ip.txt";
 $content = file_get_contents($file);
-$content .= $ip . "\n";
+$content .= $ip;
 file_put_contents($file, $content);
 
 exit();
